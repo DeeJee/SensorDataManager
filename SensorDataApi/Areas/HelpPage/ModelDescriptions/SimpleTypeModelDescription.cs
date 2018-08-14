@@ -1,0 +1,6 @@
+namespace SensorDataApi.Areas.HelpPage.ModelDescriptions
+{
+    public class SimpleTypeModelDescription : ModelDescription
+    {
+    }
+}
