@@ -1,7 +1,7 @@
 ﻿using NLog;
 using SensorDataApi.Attributes;
 //using SensorDataApi.Data;
-using SensorDataApi.Models;
+using SensorDataCommon.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

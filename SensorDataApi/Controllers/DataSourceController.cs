@@ -3,7 +3,7 @@ using NLog;
 using SensorDataCommon.Data;
 //using SensorDataApi.Data;
 using SensorDataApi.infrastructure;
-using SensorDataApi.Models;
+using SensorDataCommon.Models;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
@@ -44,7 +44,7 @@ namespace SensorDataApi.Controllers
 
         // GET: api/DataSource
         [HttpGet]
-        public IQueryable<Models.Datasource> GetDataSource()
+        public IQueryable<Datasource> GetDataSource()
         {
             logger.Info($"GET: {Request.RequestUri} called");
             var qsp = Request.GetQueryNameValuePairs();
@@ -63,10 +63,10 @@ namespace SensorDataApi.Controllers
             logger.Info($"GET: {Request.RequestUri} finished");
             logger.Info($"{query.Count()} items retrieved");
 
-            List< Models.Datasource> results = new List<Models.Datasource>();
+            List< Datasource> results = new List<Datasource>();
             foreach (var item in query)
             {
-                var ds = mapper.Map<Models.Datasource>(item);
+                var ds = mapper.Map<Datasource>(item);
                 results.Add(ds);
             }
             return results.AsQueryable();
@@ -75,7 +75,7 @@ namespace SensorDataApi.Controllers
         // GET: api/DataSource/5
         [HttpGet]
         [Route("api/DataSource/{id}")]
-        public IQueryable<Models.Datasource> GetDataSourceById(string id)
+        public IQueryable<Datasource> GetDataSourceById(string id)
         {
             logger.Info($"GET: {Request.RequestUri} called");
             
@@ -85,10 +85,10 @@ namespace SensorDataApi.Controllers
             logger.Info($"GET: {Request.RequestUri} finished");
             logger.Info($"{query.Count()} items retrieved");
 
-            List<Models.Datasource> results = new List<Models.Datasource>();
+            List<Datasource> results = new List<Datasource>();
             foreach (var item in query)
             {
-                var ds = mapper.Map<Models.Datasource>(item);
+                var ds = mapper.Map<Datasource>(item);
                 results.Add(ds);
             }
             return results.AsQueryable();

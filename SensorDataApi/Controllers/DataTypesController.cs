@@ -21,12 +21,12 @@ namespace SensorDataApi.Controllers
         private SensorDataSqlEntities db = new SensorDataSqlEntities();
 
         // GET: api/DataTypes
-        public IEnumerable<Models.DataType> GetDataType()
+        public IEnumerable<DataType> GetDataType()
         {
             var result = db.DataType.ToList();
             foreach (var dt in result)
             {
-                yield return new Models.DataType { Id = dt.Id, Name = dt.Name, Properties = dt.Properties };
+                yield return new DataType { Id = dt.Id, Name = dt.Name, Properties = dt.Properties };
             }
         }
 
@@ -41,7 +41,7 @@ namespace SensorDataApi.Controllers
                 return NotFound();
             }
 
-            var item = new Models.DataType
+            var item = new DataType
             {
                 Id = dataType.Id,
                 Name = dataType.Name,

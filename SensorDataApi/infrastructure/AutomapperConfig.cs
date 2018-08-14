@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using SensorDataCommon.Data;
+using SensorDataCommon.Models;
 
 namespace SensorDataApi.infrastructure
 {
@@ -8,7 +9,7 @@ namespace SensorDataApi.infrastructure
         static MapperConfiguration config;
         public static void Configure()
         {
-            config = new MapperConfiguration(cfg => cfg.CreateMap<DataSource, Models.Datasource>());
+            config = new MapperConfiguration(cfg => cfg.CreateMap<DataSource, Datasource>());
         }
 
         public static IMapper CreateMapper()

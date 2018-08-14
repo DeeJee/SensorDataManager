@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNet.SignalR;
 using NLog;
-using SensorDataCommon;
+using SensorDataCommon.Data;
 using System.Threading.Tasks;
 
 namespace SensorDataPublisher.Signalling

@@ -1,5 +1,5 @@
 ﻿using NLog;
-using SensorDataCommon;
+using SensorDataCommon.Data;
 using System;
 using System.Globalization;
 using System.Linq;

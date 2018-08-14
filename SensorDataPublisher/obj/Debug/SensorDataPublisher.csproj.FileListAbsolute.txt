@@ -79,7 +79,6 @@ D:\Projecten\SensorDataManager\SensorDataPublisher\bin\System.Web.WebPages.xml
 D:\Projecten\SensorDataManager\SensorDataPublisher\bin\System.Web.WebPages.Deployment.xml
 D:\Projecten\SensorDataManager\SensorDataPublisher\bin\System.Web.WebPages.Razor.xml
 D:\Projecten\SensorDataManager\SensorDataPublisher\bin\System.Web.Optimization.xml
-D:\Projecten\SensorDataManager\SensorDataPublisher\obj\Debug\SensorDataPublisher.csprojResolveAssemblyReference.cache
 D:\Projecten\SensorDataManager\SensorDataPublisher\obj\Debug\SensorDataPublisher.csproj.CoreCompileInputs.cache
 D:\Projecten\SensorDataManager\SensorDataPublisher\obj\Debug\SensorDataPublisher.csproj.CopyComplete
 D:\Projecten\SensorDataManager\SensorDataPublisher\obj\Debug\SensorDataPublisher.dll
@@ -87,3 +86,13 @@ D:\Projecten\SensorDataManager\SensorDataPublisher\obj\Debug\SensorDataPublisher
 D:\Projecten\SensorDataManager\SensorDataPublisher\bin\Owin.dll
 D:\Projecten\SensorDataManager\SensorDataPublisher\bin\WebGrease.dll
 D:\Projecten\SensorDataManager\SensorDataPublisher\obj\Debug\SensorDataPublisher.csprojAssemblyReference.cache
+D:\Projecten\SensorDataManager\SensorDataPublisher\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Projecten\SensorDataManager\SensorDataPublisher\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projecten\SensorDataManager\SensorDataPublisher\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Projecten\SensorDataManager\SensorDataPublisher\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Projecten\SensorDataManager\SensorDataPublisher\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Projecten\SensorDataManager\SensorDataPublisher\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Projecten\SensorDataManager\SensorDataPublisher\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projecten\SensorDataManager\SensorDataPublisher\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Projecten\SensorDataManager\SensorDataPublisher\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Projecten\SensorDataManager\SensorDataPublisher\bin\Microsoft.Owin.Security.OAuth.xml
