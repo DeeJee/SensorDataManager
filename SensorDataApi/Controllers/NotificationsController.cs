@@ -12,6 +12,7 @@ using System.Net.Http;
 using System.Diagnostics;
 using System.Data.Entity.Validation;
 using Microsoft.AspNet.SignalR;
+using SensorDataApi.Security;
 
 namespace SensorDataApi.Controllers
 {
@@ -23,6 +24,7 @@ namespace SensorDataApi.Controllers
 
         // GET: api/Notification
         [ResponseType(typeof(IQueryable<Notification>))]
+        [TokenValidation]
         public IHttpActionResult GetNotifications()
         {
             logger.Info($"GET: {Request.RequestUri} called");
@@ -56,6 +58,7 @@ namespace SensorDataApi.Controllers
 
         // GET: api/Notification/5
         [ResponseType(typeof(Notification))]
+        [TokenValidation]
         public IHttpActionResult GetNotifications(int id)
         {
             logger.Info($"GET: {Request.RequestUri} called");
@@ -112,6 +115,7 @@ namespace SensorDataApi.Controllers
 
         // DELETE: api/Notification/5
         [ResponseType(typeof(Notification))]
+        [TokenValidation]
         public IHttpActionResult Delete(int id)
         {
             logger.Info($"DELETE: {Request.RequestUri} called");

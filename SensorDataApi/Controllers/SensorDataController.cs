@@ -16,6 +16,7 @@ using System.Web.Http.Description;
 using Microsoft.AspNet.SignalR;
 using EntityFramework.Extensions;
 using SensorDataCommon.Data;
+using SensorDataApi.Security;
 
 namespace SensorDataApi.Controllers
 {
@@ -41,6 +42,7 @@ namespace SensorDataApi.Controllers
         }
 
         // GET: api/SensorData
+        [TokenValidation]
         public IQueryable<SensorData> Get()
         {
             Stopwatch stopwatch = new Stopwatch();
@@ -55,7 +57,7 @@ namespace SensorDataApi.Controllers
         // GET: api/SensorData/5
         [ResponseType(typeof(SensorData))]
         [HttpGet]
-        [Route("api/SensorData/{deviceId}")]
+        [Route("api/SensorData/{deviceId}")]    
         public IQueryable<SensorData> Get(string deviceId)
         {
             logger.Info($"GET: {Request.RequestUri} called");

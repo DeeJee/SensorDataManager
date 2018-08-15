@@ -11,9 +11,12 @@ using SensorDataCommon.Data;
 using NLog;
 using System.Data.Entity.Validation;
 using System.Web.Http.Results;
+using SensorDataApi.Security;
 
 namespace SensorDataApi.Controllers
 {
+    [TokenValidation]
+
     public class DataTypesController : ApiController
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();

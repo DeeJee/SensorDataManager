@@ -126,3 +126,13 @@ D:\Projecten\SensorDataManager\SensorDataApi\bin\AutoMapper.pdb
 D:\Projecten\SensorDataManager\SensorDataApi\bin\AutoMapper.xml
 D:\Projecten\SensorDataManager\SensorDataApi\bin\System.ValueTuple.xml
 D:\Projecten\SensorDataManager\SensorDataApi\bin\EntityFramework.Extensions.dll
+D:\Projecten\SensorDataManager\SensorDataApi\bin\Microsoft.IdentityModel.Protocols.dll
+D:\Projecten\SensorDataManager\SensorDataApi\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Projecten\SensorDataManager\SensorDataApi\bin\Microsoft.IdentityModel.Protocols.pdb
+D:\Projecten\SensorDataManager\SensorDataApi\bin\Microsoft.IdentityModel.Protocols.xml
+D:\Projecten\SensorDataManager\SensorDataApi\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.pdb
+D:\Projecten\SensorDataManager\SensorDataApi\bin\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Projecten\SensorDataManager\SensorDataApi\bin\System.Web.Http.Cors.dll
+D:\Projecten\SensorDataManager\SensorDataApi\bin\System.Web.Http.Owin.dll
+D:\Projecten\SensorDataManager\SensorDataApi\bin\System.Web.Http.Cors.xml
+D:\Projecten\SensorDataManager\SensorDataApi\bin\System.Web.Http.Owin.xml

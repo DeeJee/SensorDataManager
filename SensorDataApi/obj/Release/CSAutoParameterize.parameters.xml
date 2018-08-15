@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-SensorDataApi-20170522100749.mdf;Initial Catalog=aspnet-SensorDataApi-20170522100749;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Projecten\\SensorDataManager\\SensorDataApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="SensorDataSqlEntities-Web.config Connection String" description="SensorDataSqlEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Data.SensorDataModel.csdl|res://*/Data.SensorDataModel.ssdl|res://*/Data.SensorDataModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=databaseserver.database.windows.net;initial catalog=SensorDataSql;persist security info=True;user id=dennis;password=1Paashaas!;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Projecten\\SensorDataManager\\SensorDataApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SensorDataSqlEntities']/@connectionString" />
+  </parameter>
+</parameters>

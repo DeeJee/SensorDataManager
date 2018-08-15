@@ -12,9 +12,11 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using SensorDataApi.Security;
 
 namespace SensorDataApi.Controllers
 {
+    [TokenValidation]
     public class DataSourceController : ApiController
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
