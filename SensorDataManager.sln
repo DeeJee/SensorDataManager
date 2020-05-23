@@ -1,13 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2015
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorDataPublisher", "SensorDataPublisher\SensorDataPublisher.csproj", "{986D1A35-1FED-4DA6-9D46-C1DC9BAD986A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SensorData.Common", "SensorData.Common\SensorData.Common.csproj", "{6E1744D3-8410-459D-A0FF-BF0C11D3C197}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorDataApi", "SensorDataApi\SensorDataApi.csproj", "{81E0FD01-79F4-48FE-9392-FBC71ED2B0E5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorDataCommon", "SensorDataCommon\SensorDataCommon.csproj", "{9BD6EB7E-DD77-4C2A-844A-B90281493FED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SensorData.Api", "SensorData.Api\SensorData.Api.csproj", "{4902F749-0F53-45A2-8E78-CCBBEB3E5DA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{986D1A35-1FED-4DA6-9D46-C1DC9BAD986A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{986D1A35-1FED-4DA6-9D46-C1DC9BAD986A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{986D1A35-1FED-4DA6-9D46-C1DC9BAD986A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{986D1A35-1FED-4DA6-9D46-C1DC9BAD986A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{81E0FD01-79F4-48FE-9392-FBC71ED2B0E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{81E0FD01-79F4-48FE-9392-FBC71ED2B0E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{81E0FD01-79F4-48FE-9392-FBC71ED2B0E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{81E0FD01-79F4-48FE-9392-FBC71ED2B0E5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BD6EB7E-DD77-4C2A-844A-B90281493FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BD6EB7E-DD77-4C2A-844A-B90281493FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BD6EB7E-DD77-4C2A-844A-B90281493FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BD6EB7E-DD77-4C2A-844A-B90281493FED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E1744D3-8410-459D-A0FF-BF0C11D3C197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E1744D3-8410-459D-A0FF-BF0C11D3C197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E1744D3-8410-459D-A0FF-BF0C11D3C197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E1744D3-8410-459D-A0FF-BF0C11D3C197}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4902F749-0F53-45A2-8E78-CCBBEB3E5DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4902F749-0F53-45A2-8E78-CCBBEB3E5DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4902F749-0F53-45A2-8E78-CCBBEB3E5DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4902F749-0F53-45A2-8E78-CCBBEB3E5DA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

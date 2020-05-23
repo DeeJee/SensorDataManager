@@ -1,0 +1,10 @@
+D:\Projecten\SensorDataManager\SensorData.Common\obj\Debug\netcoreapp3.0\SensorData.Common.csprojAssemblyReference.cache
+D:\Projecten\SensorDataManager\SensorData.Common\obj\Debug\netcoreapp3.0\SensorData.Common.AssemblyInfoInputs.cache
+D:\Projecten\SensorDataManager\SensorData.Common\obj\Debug\netcoreapp3.0\SensorData.Common.AssemblyInfo.cs
+D:\Projecten\SensorDataManager\SensorData.Common\bin\Debug\netcoreapp3.0\SensorData.Common.deps.json
+D:\Projecten\SensorDataManager\SensorData.Common\bin\Debug\netcoreapp3.0\SensorData.Common.dll
+D:\Projecten\SensorDataManager\SensorData.Common\bin\Debug\netcoreapp3.0\SensorData.Common.runtimeconfig.json
+D:\Projecten\SensorDataManager\SensorData.Common\bin\Debug\netcoreapp3.0\SensorData.Common.runtimeconfig.dev.json
+D:\Projecten\SensorDataManager\SensorData.Common\bin\Debug\netcoreapp3.0\SensorData.Common.pdb
+D:\Projecten\SensorDataManager\SensorData.Common\obj\Debug\netcoreapp3.0\SensorData.Common.dll
+D:\Projecten\SensorDataManager\SensorData.Common\obj\Debug\netcoreapp3.0\SensorData.Common.pdb
