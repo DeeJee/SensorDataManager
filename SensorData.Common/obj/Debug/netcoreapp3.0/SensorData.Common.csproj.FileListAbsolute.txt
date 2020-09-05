@@ -8,3 +8,6 @@ D:\Projecten\SensorDataManager\SensorData.Common\bin\Debug\netcoreapp3.0\SensorD
 D:\Projecten\SensorDataManager\SensorData.Common\bin\Debug\netcoreapp3.0\SensorData.Common.pdb
 D:\Projecten\SensorDataManager\SensorData.Common\obj\Debug\netcoreapp3.0\SensorData.Common.dll
 D:\Projecten\SensorDataManager\SensorData.Common\obj\Debug\netcoreapp3.0\SensorData.Common.pdb
+D:\Projecten\SensorDataManager\SensorData.Common\obj\Debug\netcoreapp3.0\SensorData.Common.genruntimeconfig.cache
+D:\Projecten\SensorDataManager\SensorData.Common\bin\Debug\netcoreapp3.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
+D:\Projecten\SensorDataManager\SensorData.Common\bin\Debug\netcoreapp3.0\Cosmos.CRTCompat.dll

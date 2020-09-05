@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using NLog;
-using MySensorData.Common.Data;
 using SensorDataApi.Signalling;
 using System.Threading.Tasks;
 using System;

@@ -1,54 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Web.Http.Description;
 using NLog;
 using Microsoft.AspNetCore.Mvc;
-using MySensorData.Common.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Authorization;
+using SensorData.Api.Data;
+using SensorData.Api.Models;
 
 namespace SensorDataApi.Controllers
 {
     //[TokenValidation]
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+#if DEBUG
+#else
+[Authorize]
+#endif
     public class DataTypesController : ControllerBase
     {
         private static Logger logger = LogManager.GetCurrentClassLogger();
-        private SensorDataSqlContext db;
+        private IDataTypeRepository datatypeRepo;
 
-        public DataTypesController(SensorDataSqlContext db)
+        public DataTypesController(IDataTypeRepository repo)
         {
-            this.db = db;
+            this.datatypeRepo = repo;
         }
-        
+
         // GET: api/DataTypes
         [HttpGet]
-        public IEnumerable<MySensorData.Common.Data.DataType> GetDataTypes()
+        public IEnumerable<DataTypeModel> GetDataTypes()
         {
-            var result = db.DataType.ToList();
-            foreach (var dt in result)
-            {
-                yield return new MySensorData.Common.Data.DataType { Id = dt.Id, Name = dt.Name, Properties = dt.Properties };
-            }
+            return datatypeRepo.GetDataTypes();
+
         }
 
         // GET: api/DataTypes/5
-        [ResponseType(typeof(MySensorData.Common.Data.DataType))]
+        [ResponseType(typeof(DataTypeModel))]
         [HttpGet("{id}")]
         public ActionResult GetDataType(int id)
         {
-            MySensorData.Common.Data.DataType dataType = db.DataType.Find(id);
+            DataTypeModel dataType = datatypeRepo.GetDataType(id);
             if (dataType == null)
             {
                 return NotFound();
             }
 
-            var item = new MySensorData.Common.Data.DataType
+            var item = new DataTypeModel
             {
                 Id = dataType.Id,
                 Name = dataType.Name,
@@ -60,7 +60,8 @@ namespace SensorDataApi.Controllers
 
         // PUT: api/DataTypes/5
         [ResponseType(typeof(void))]
-        public ActionResult PutDataType(int id, MySensorData.Common.Data.DataType dataType)
+        [HttpPut("{id}")]
+        public ActionResult PutDataType(int id, DataTypeModel dataType)
         {
             if (!ModelState.IsValid)
             {
@@ -72,31 +73,23 @@ namespace SensorDataApi.Controllers
                 return BadRequest();
             }
 
-            db.Entry(dataType).State = EntityState.Modified;
-
             try
             {
-                db.SaveChanges();
+                datatypeRepo.UpdateDataType(dataType);
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException ex)
             {
-                if (!DataTypeExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                logger.Error(ex);
+                throw;
             }
 
             return NoContent();
         }
 
         // POST: api/DataTypes
-        [ResponseType(typeof(SensorDataCommon.Models.DataType))]
+        [ResponseType(typeof(DataTypeModel))]
         [HttpPost]
-        public IActionResult PostDataType(MySensorData.Common.Data.DataType dataType)
+        public IActionResult PostDataType(DataTypeModel dataType)
         {
             logger.Info($"POST: {Request.Path} called");
             logger.Info("Storing DataType: Id={0}, Name={1}, Properties={2}",
@@ -109,59 +102,27 @@ namespace SensorDataApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.DataType.Add(dataType);
-
             try
             {
-                var validationContext = new ValidationContext(dataType);
-                Validator.ValidateObject(dataType, validationContext);
-                db.SaveChanges();
+                datatypeRepo.AddDataType(dataType);
             }
-            catch (DbUpdateException ex)
-            {
-                if (DataTypeExists(dataType.Properties))
-                {
-                    logger.Error(ex);
-                    return StatusCode(StatusCodes.Status500InternalServerError, "A datatype with these properties already exists.");
-                }
-                else
-                {
-                    logger.Error(ex);
-                    return StatusCode(StatusCodes.Status500InternalServerError, ex.InnerException.InnerException.Message);
-                }
-            }
-            catch (ValidationException ex)
+            catch (Exception ex)
             {
                 logger.Error(ex);
-                return StatusCode(StatusCodes.Status500InternalServerError, ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
 
             return Created(Request.Path, dataType);
         }
 
         // DELETE: api/DataTypes/5
-        [ResponseType(typeof(MySensorData.Common.Data.DataType))]
+        [ResponseType(typeof(DataType))]
+        [HttpDelete]
         public ActionResult DeleteDataType(int id)
         {
-            MySensorData.Common.Data.DataType dataType = db.DataType.Find(id);
-            if (dataType == null)
-            {
-                return NotFound();
-            }
+            datatypeRepo.DeleteDataType(id);
 
-            db.DataType.Remove(dataType);
-            db.SaveChanges();
-
-            return Ok(dataType);
-        }
-
-        private bool DataTypeExists(string properties)
-        {
-            return db.DataType.Count(e => e.Properties == properties) > 0;
-        }
-        private bool DataTypeExists(int id)
-        {
-            return db.DataType.Count(e => e.Id == id) > 0;
+            return NoContent();
         }
 
         private static Uri GetUri(HttpRequest request)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace MySensorData.Common.Data
@@ -9,5 +10,5 @@ namespace MySensorData.Common.Data
         public DateTime TimeStamp { get; set; }
         public string DeviceId { get; set; }
         public string Payload { get; set; }
-    }
+    }    
 }
